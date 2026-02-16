@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Defence-grade light tactical palette */
-    --background: 40 10% 97%;
+    /* Militros tactical palette */
+    --background: 50 15% 96%;
     --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
@@ -16,41 +16,42 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
 
-    /* Gunmetal primary */
-    --primary: 210 12% 28%;
-    --primary-foreground: 40 10% 97%;
+    /* Deep Olive Green primary */
+    --primary: 64 32% 33%;
+    --primary-foreground: 50 15% 96%;
 
-    /* Steel grey secondary */
-    --secondary: 210 8% 90%;
-    --secondary-foreground: 210 12% 28%;
+    /* Muted Sage secondary */
+    --secondary: 66 20% 70%;
+    --secondary-foreground: 64 32% 20%;
 
-    /* Muted olive */
-    --muted: 80 8% 88%;
-    --muted-foreground: 200 8% 46%;
+    /* Muted tones */
+    --muted: 66 15% 85%;
+    --muted-foreground: 64 10% 42%;
 
-    /* Slate blue accent */
-    --accent: 215 25% 42%;
-    --accent-foreground: 40 10% 97%;
+    /* Burnt Orange accent */
+    --accent: 28 63% 44%;
+    --accent-foreground: 50 15% 96%;
 
     /* Deep red CTA */
     --destructive: 0 60% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 10% 85%;
-    --input: 210 10% 85%;
-    --ring: 215 25% 42%;
+    --border: 64 10% 82%;
+    --input: 64 10% 82%;
+    --ring: 28 63% 44%;
     --radius: 0.25rem;
 
     /* Custom tokens */
-    --cta: 0 55% 42%;
+    --cta: 28 63% 44%;
     --cta-foreground: 0 0% 100%;
-    --cta-hover: 0 55% 35%;
-    --gunmetal: 210 12% 28%;
-    --steel: 210 8% 52%;
-    --olive: 80 12% 38%;
-    --slate-blue: 215 25% 42%;
-    --tactical-white: 40 10% 97%;
-    --section-alt: 210 8% 94%;
+    --cta-hover: 28 63% 36%;
+    --gunmetal: 64 32% 25%;
+    --steel: 64 15% 48%;
+    --olive: 64 32% 33%;
+    --slate-blue: 28 63% 44%;
+    --tactical-white: 50 15% 96%;
+    --section-alt: 66 15% 92%;
+    --sage: 66 20% 70%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

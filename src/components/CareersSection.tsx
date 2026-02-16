@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 const positions = [
-  { title: "Senior AI Engineer", team: "Autonomous Systems", location: "Restricted" },
-  { title: "Systems Architect", team: "Defence Platforms", location: "Restricted" },
-  { title: "Cybersecurity Analyst", team: "Cyber Operations", location: "Restricted" },
-  { title: "Hardware Engineer", team: "Product Engineering", location: "Restricted" },
+  { title: "Senior AI Engineer", team: "Autonomous Systems", location: "On-site" },
+  { title: "Hardware Integration Lead", team: "Product Engineering", location: "On-site" },
+  { title: "Embedded Systems Developer", team: "IoT & Electronics", location: "Hybrid" },
+  { title: "Defence Systems Architect", team: "Defence Programs", location: "On-site" },
+  { title: "Mechanical Design Engineer", team: "Manufacturing", location: "On-site" },
 ];
 
 const CareersSection = () => {
@@ -31,12 +32,11 @@ const CareersSection = () => {
               Join the Mission
             </h2>
             <p className="text-muted-foreground mb-12 max-w-2xl">
-              We recruit exceptional engineers, researchers, and strategists committed to national security. 
-              Competitive compensation, security clearance support, and work that matters.
+              We recruit exceptional engineers, researchers, and strategists committed to 
+              building future-ready technology. A performance-driven culture where innovation matters.
             </p>
           </motion.div>
 
-          {/* Why Join */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -44,18 +44,21 @@ const CareersSection = () => {
             className="grid md:grid-cols-3 gap-6 mb-12"
           >
             {[
-              { title: "Mission-Driven", desc: "Work on technology that protects lives and secures nations." },
-              { title: "Top Clearance", desc: "Security clearance sponsorship and classified project access." },
-              { title: "Internships", desc: "Structured programs for top engineering and research students." },
-            ].map((item) => (
-              <div key={item.title} className="bg-card border border-border p-6">
+              { title: "Innovation-Focused", desc: "Work on technology that shapes defence, consumer electronics, and emerging tech." },
+              { title: "Growth Partnership", desc: "Your growth is our growth — competitive compensation and career development." },
+              { title: "Internships", desc: "Structured programs for top engineering and research students across all domains." },
+            ].map((item, i) => (
+              <motion.div
+                key={item.title}
+                whileHover={{ scale: 1.03, y: -4 }}
+                className="bg-card border border-border p-6"
+              >
                 <h4 className="text-sm font-semibold text-foreground mb-2">{item.title}</h4>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
 
-          {/* Open Positions */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -65,9 +68,13 @@ const CareersSection = () => {
               Open Positions
             </h3>
             <div className="space-y-3">
-              {positions.map((pos) => (
-                <div
+              {positions.map((pos, i) => (
+                <motion.div
                   key={pos.title}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
+                  whileHover={{ x: 4 }}
                   className="flex items-center justify-between bg-card border border-border p-4 hover:border-accent/40 transition-colors cursor-pointer group"
                 >
                   <div>
@@ -75,12 +82,12 @@ const CareersSection = () => {
                     <p className="text-xs text-muted-foreground">{pos.team} · {pos.location}</p>
                   </div>
                   <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-accent transition-colors" />
-                </div>
+                </motion.div>
               ))}
             </div>
             <div className="mt-8">
               <Link to="/contact">
-                <Button variant="cta">Submit Secure Application</Button>
+                <Button variant="cta">Apply Now</Button>
               </Link>
             </div>
           </motion.div>

@@ -15,7 +15,7 @@ const Contact = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-      toast.success("Message submitted securely. We will respond through verified channels.");
+      toast.success("Message submitted successfully. We'll get back to you soon.");
       (e.target as HTMLFormElement).reset();
     }, 1500);
   };
@@ -32,14 +32,13 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
               <p className="text-xs tracking-[0.3em] uppercase text-accent font-medium mb-4">
-                Secure Contact
+                Contact Us
               </p>
               <h1 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
-                Initiate Contact
+                Get in Touch
               </h1>
               <p className="text-muted-foreground mb-10">
-                All communications are processed through secure channels. 
-                Provide your details below and our team will respond within 48 hours through verified means.
+                Interested in collaborating? Reach out and our team will respond within 48 hours.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -48,26 +47,26 @@ const Contact = () => {
                     <label className="text-xs font-medium uppercase tracking-wider text-foreground mb-2 block">
                       Full Name *
                     </label>
-                    <Input required placeholder="Name" maxLength={100} className="bg-card" />
+                    <Input required placeholder="Your name" maxLength={100} className="bg-card" />
                   </div>
                   <div>
                     <label className="text-xs font-medium uppercase tracking-wider text-foreground mb-2 block">
-                      Organisation *
+                      Organisation
                     </label>
-                    <Input required placeholder="Organisation" maxLength={100} className="bg-card" />
+                    <Input placeholder="Company / Organisation" maxLength={100} className="bg-card" />
                   </div>
                 </div>
                 <div>
                   <label className="text-xs font-medium uppercase tracking-wider text-foreground mb-2 block">
-                    Official Email *
+                    Email *
                   </label>
-                  <Input required type="email" placeholder="email@domain.gov" maxLength={255} className="bg-card" />
+                  <Input required type="email" placeholder="you@company.com" maxLength={255} className="bg-card" />
                 </div>
                 <div>
                   <label className="text-xs font-medium uppercase tracking-wider text-foreground mb-2 block">
                     Subject *
                   </label>
-                  <Input required placeholder="Subject" maxLength={200} className="bg-card" />
+                  <Input required placeholder="What's this about?" maxLength={200} className="bg-card" />
                 </div>
                 <div>
                   <label className="text-xs font-medium uppercase tracking-wider text-foreground mb-2 block">
@@ -75,17 +74,14 @@ const Contact = () => {
                   </label>
                   <Textarea
                     required
-                    placeholder="Describe your enquiry. Do not include classified information."
+                    placeholder="Tell us about your project or enquiry..."
                     rows={5}
                     maxLength={2000}
                     className="bg-card resize-none"
                   />
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  Do not submit classified or sensitive national security information through this form.
-                </p>
                 <Button type="submit" variant="cta" size="lg" disabled={loading}>
-                  {loading ? "Submitting..." : "Submit Secure Message"}
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </motion.div>

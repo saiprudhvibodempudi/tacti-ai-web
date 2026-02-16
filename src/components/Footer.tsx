@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -6,18 +7,18 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="font-serif text-xl font-bold tracking-tight">
-              militros<span className="text-primary-foreground/50">.ai</span>
+            <Link to="/" className="flex items-center gap-2">
+              <img src={logo} alt="Militros" className="h-8 brightness-0 invert" />
             </Link>
             <p className="text-xs text-primary-foreground/50 mt-3 leading-relaxed">
-              AI-powered defence systems for modern security operations.
+              Designing for a smarter, safer, future-ready tomorrow.
             </p>
           </div>
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-widest mb-4 text-primary-foreground/70">Company</h4>
             <ul className="space-y-2 text-xs text-primary-foreground/50">
               <li><a href="#about" className="hover:text-primary-foreground transition-colors">About</a></li>
-              <li><a href="#research" className="hover:text-primary-foreground transition-colors">Research</a></li>
+              <li><a href="#projects" className="hover:text-primary-foreground transition-colors">Projects</a></li>
               <li><a href="#careers" className="hover:text-primary-foreground transition-colors">Careers</a></li>
             </ul>
           </div>
@@ -25,22 +26,21 @@ const Footer = () => {
             <h4 className="text-xs font-semibold uppercase tracking-widest mb-4 text-primary-foreground/70">Expertise</h4>
             <ul className="space-y-2 text-xs text-primary-foreground/50">
               <li><a href="#domains" className="hover:text-primary-foreground transition-colors">Defence Systems</a></li>
-              <li><a href="#domains" className="hover:text-primary-foreground transition-colors">AI Technologies</a></li>
+              <li><a href="#domains" className="hover:text-primary-foreground transition-colors">AI & Emerging Tech</a></li>
               <li><a href="#capabilities" className="hover:text-primary-foreground transition-colors">Capabilities</a></li>
             </ul>
           </div>
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-widest mb-4 text-primary-foreground/70">Contact</h4>
             <ul className="space-y-2 text-xs text-primary-foreground/50">
-              <li>info@militros.ai</li>
-              <li>Secure Communications Only</li>
+              <li>info@militros.com</li>
               <li><Link to="/contact" className="hover:text-primary-foreground transition-colors">Contact Form</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center">
           <p className="text-xs text-primary-foreground/40">
-            © {new Date().getFullYear()} militros.ai — All rights reserved. Classified information policy applies.
+            © {new Date().getFullYear()} Militros — All rights reserved.
           </p>
         </div>
       </div>

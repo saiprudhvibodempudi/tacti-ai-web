@@ -1,6 +1,12 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+
+const stats = [
+  { value: "4+", label: "Industry Domains" },
+  { value: "50+", label: "Products Delivered" },
+  { value: "Global", label: "Client Reach" },
+  { value: "24/7", label: "Operations" },
+];
 
 const AboutSection = () => {
   const ref = useRef(null);
@@ -16,34 +22,45 @@ const AboutSection = () => {
           className="max-w-4xl mx-auto"
         >
           <p className="text-xs tracking-[0.3em] uppercase text-accent font-medium mb-4">
-            About militros.ai
+            About Militros
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-8">
-            Engineering the Future of National Defence
+            Performance-Driven Innovation Across Sectors
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <p className="text-muted-foreground leading-relaxed">
-              militros.ai is a defence technology company dedicated to developing AI-powered systems 
-              that protect national security interests. We operate at the intersection of artificial 
-              intelligence, military engineering, and strategic defence operations.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Our mission is to deliver field-tested, mission-critical platforms that enable 
-              governments and defence agencies to maintain strategic superiority. Every system 
-              we build meets the highest standards of security, reliability, and operational readiness.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, x: -30 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-muted-foreground leading-relaxed"
+            >
+              Militros is a performance-driven team focused on solving complex problems across 
+              manufacturing, defence, and consumer electronics. We create innovative products 
+              aligned with accelerated technological advancement.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: 30 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-muted-foreground leading-relaxed"
+            >
+              Our vision is to improve everyday life by delivering smarter, more efficient 
+              alternatives across sectors — from defence to consumer technology. Your growth 
+              is our growth.
+            </motion.p>
           </div>
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-border pt-10">
-            {[
-              { value: "12+", label: "Active Programs" },
-              { value: "99.9%", label: "System Uptime" },
-              { value: "NATO", label: "Standards Compliant" },
-              { value: "24/7", label: "Operations Centre" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-2xl md:text-3xl font-serif font-bold text-foreground">{stat.value}</div>
+            {stats.map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-2xl md:text-3xl font-serif font-bold text-accent">{stat.value}</div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{stat.label}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
