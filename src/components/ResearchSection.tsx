@@ -4,19 +4,19 @@ import { useRef } from "react";
 const areas = [
   {
     title: "Autonomous Systems",
-    description: "Next-generation unmanned platforms with advanced perception and decision-making capabilities for contested environments.",
+    description: "Next-generation unmanned platforms with advanced perception and decision-making for defence and commercial applications.",
   },
   {
     title: "Predictive Intelligence",
-    description: "Multi-source data fusion and predictive analytics for strategic threat assessment and early-warning systems.",
+    description: "Multi-source data fusion and predictive analytics for strategic threat assessment and operational planning.",
   },
   {
-    title: "Secure Communications",
-    description: "Quantum-resistant encryption protocols and hardened communication frameworks for classified operations.",
+    title: "Electric Mobility",
+    description: "Custom EV control systems, battery management, and regenerative technologies for sustainable transport.",
   },
   {
-    title: "Cyber Defence",
-    description: "AI-powered threat hunting, network anomaly detection, and automated incident response for critical infrastructure.",
+    title: "Healthcare Technology",
+    description: "AI-powered diagnostic tools, smart wearables, and remote patient monitoring platforms.",
   },
 ];
 
@@ -25,7 +25,7 @@ const ResearchSection = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="research" className="py-24 bg-section-alt">
+    <section id="research" className="py-24 bg-background">
       <div className="container mx-auto px-4" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -37,20 +37,26 @@ const ResearchSection = () => {
             Research & Innovation
           </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-12">
-            Advancing the Frontier of Defence Technology
+            Building the Future, Not Refining the Past
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6">
             {areas.map((area, i) => (
               <motion.div
                 key={area.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 * i }}
-                className="bg-card border border-border p-6 hover:border-accent/40 transition-colors"
+                whileHover={{ scale: 1.02, borderColor: "hsl(28 63% 44% / 0.5)" }}
+                className="bg-card border border-border p-6 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="w-2 h-2 bg-accent rounded-full" />
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={inView ? { scale: 1 } : {}}
+                    transition={{ delay: 0.2 + i * 0.1, type: "spring" }}
+                    className="w-2.5 h-2.5 bg-accent rounded-full"
+                  />
                   <h3 className="text-base font-serif font-bold text-foreground">{area.title}</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>

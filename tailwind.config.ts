@@ -62,6 +62,7 @@ export default {
         "slate-blue": "hsl(var(--slate-blue))",
         "tactical-white": "hsl(var(--tactical-white))",
         "section-alt": "hsl(var(--section-alt))",
+        sage: "hsl(var(--sage))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

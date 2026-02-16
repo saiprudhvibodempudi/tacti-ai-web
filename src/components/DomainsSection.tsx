@@ -1,22 +1,32 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Shield, Cpu, Settings } from "lucide-react";
+import { Shield, Cpu, Settings, Smartphone, Zap } from "lucide-react";
 
 const domains = [
   {
     icon: Shield,
-    title: "Defence & Military Systems",
-    description: "Integrated command-and-control platforms, threat detection systems, and force-multiplying technologies designed for modern battlefields.",
+    title: "Defence Systems",
+    description: "Future-ready reconnaissance, intelligence, surveillance, and border deployment systems used by defence organisations.",
   },
   {
     icon: Cpu,
-    title: "AI & Autonomous Technologies",
-    description: "Machine learning models, autonomous decision-support systems, and predictive intelligence platforms built for defence-grade operations.",
+    title: "AI & Emerging Tech",
+    description: "Machine learning platforms, autonomous decision-support systems, and predictive intelligence for mission-critical operations.",
   },
   {
     icon: Settings,
-    title: "Product Engineering",
-    description: "End-to-end engineering of ruggedised hardware, embedded software, and sensor systems that operate in the most demanding environments.",
+    title: "Manufacturing Technology",
+    description: "End-to-end product engineering with hardware integration, mechanical design, and manufacturing-ready prototyping.",
+  },
+  {
+    icon: Smartphone,
+    title: "Consumer Electronics",
+    description: "Smart wearables, IoT systems, and consumer devices designed for performance and everyday utility.",
+  },
+  {
+    icon: Zap,
+    title: "Product Development",
+    description: "From concept to market — electric vehicles, healthcare tech, robotics, and industrial automation solutions.",
   },
 ];
 
@@ -41,18 +51,24 @@ const DomainsSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {domains.map((domain, i) => (
             <motion.div
               key={domain.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="bg-card border border-border p-8 hover:shadow-lg transition-shadow"
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              whileHover={{ y: -8, boxShadow: "0 20px 40px -15px hsl(28 63% 44% / 0.15)" }}
+              className="bg-card border border-border p-6 hover:border-accent/40 transition-colors cursor-default"
             >
-              <domain.icon className="h-8 w-8 text-accent mb-6" strokeWidth={1.5} />
-              <h3 className="text-lg font-serif font-bold text-foreground mb-3">{domain.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{domain.description}</p>
+              <motion.div
+                whileHover={{ rotate: 5, scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <domain.icon className="h-8 w-8 text-accent mb-5" strokeWidth={1.5} />
+              </motion.div>
+              <h3 className="text-sm font-serif font-bold text-foreground mb-2">{domain.title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{domain.description}</p>
             </motion.div>
           ))}
         </div>
