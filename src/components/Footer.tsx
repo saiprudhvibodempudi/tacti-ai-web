@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -7,8 +6,8 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="Militros" className="h-8 brightness-0 invert" />
+            <Link to="/" className="font-serif text-xl font-bold tracking-tight text-primary-foreground">
+              militros
             </Link>
             <p className="text-xs text-primary-foreground/50 mt-3 leading-relaxed">
               Designing for a smarter, safer, future-ready tomorrow.

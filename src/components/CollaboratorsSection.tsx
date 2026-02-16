@@ -1,11 +1,21 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+const clients = [
+  "Titan",
+  "Indian Army",
+  "Tata Steel",
+  "Drone Guru",
+  "Aidin Technologies Pvt Ltd",
+  "Govt of Telangana",
+  "C-DAC",
+];
+
 const clientTypes = [
   { label: "Startups", desc: "Early-stage ventures scaling from prototype to product-market fit." },
   { label: "Large Enterprises", desc: "Established organisations modernising legacy systems with AI and automation." },
   { label: "Multi-Nationals", desc: "Global corporations seeking integrated hardware-software solutions." },
-  { label: "Defence Organisations", desc: "Government agencies and defence ministries requiring mission-critical systems." },
+  { label: "Defence Organisations", desc: "Government agencies and defence bodies requiring mission-critical systems." },
 ];
 
 const CollaboratorsSection = () => {
@@ -32,28 +42,52 @@ const CollaboratorsSection = () => {
           </p>
         </motion.div>
 
+        {/* Client logos / names marquee */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-4xl mx-auto">
+            {clients.map((client, i) => (
+              <motion.div
+                key={client}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
+                whileHover={{ scale: 1.08, y: -2 }}
+                className="bg-primary-foreground/10 border border-primary-foreground/15 px-5 py-3 text-sm font-medium tracking-wide text-primary-foreground/90 hover:bg-primary-foreground/15 transition-colors"
+              >
+                {client}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Client types */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {clientTypes.map((client, i) => (
+          {clientTypes.map((ct, i) => (
             <motion.div
-              key={client.label}
+              key={ct.label}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.12 }}
+              transition={{ duration: 0.5, delay: i * 0.12 + 0.4 }}
               whileHover={{ scale: 1.05 }}
               className="border border-primary-foreground/15 rounded-sm p-6 text-center hover:bg-primary-foreground/5 transition-colors"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 animate={inView ? { scale: 1 } : {}}
-                transition={{ duration: 0.4, delay: i * 0.12 + 0.2, type: "spring" }}
+                transition={{ duration: 0.4, delay: i * 0.12 + 0.5, type: "spring" }}
                 className="w-14 h-14 mx-auto mb-4 rounded-full bg-primary-foreground/10 flex items-center justify-center"
               >
                 <span className="text-xl font-serif font-bold text-primary-foreground/80">
-                  {client.label.charAt(0)}
+                  {ct.label.charAt(0)}
                 </span>
               </motion.div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide mb-2">{client.label}</h3>
-              <p className="text-xs text-primary-foreground/60 leading-relaxed">{client.desc}</p>
+              <h3 className="text-sm font-semibold uppercase tracking-wide mb-2">{ct.label}</h3>
+              <p className="text-xs text-primary-foreground/60 leading-relaxed">{ct.desc}</p>
             </motion.div>
           ))}
         </div>
