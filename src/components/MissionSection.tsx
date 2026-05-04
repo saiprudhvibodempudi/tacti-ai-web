@@ -3,26 +3,6 @@ import { useRef, useState } from "react";
 import { Target, Eye, Lightbulb, Heart } from "lucide-react";
 
 const values = [
-  {
-    icon: Target,
-    title: "Our Mission",
-    text: "Develop cutting-edge and high-impact defence technologies that bring automation, enhance security, protect lives, and drive innovation for a safer world.",
-  },
-  {
-    icon: Eye,
-    title: "Our Vision",
-    text: "To become a leading innovator in defence technology, ensuring our advanced automation solutions play a vital role in enhancing security, efficiency, and resilience in every aspect of modern defence and civilian life.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Core Belief",
-    text: "A safe nation enables progress. We're a future-ready, innovation-focused team driven by growth partnership — your growth is our growth.",
-  },
-  {
-    icon: Heart,
-    title: "Our Values",
-    text: "Integrity, innovation, and excellence guide everything we do. We prioritize safety, quality, and reliability in every solution we deliver to our partners and nation.",
-  },
 ];
 
 const MissionSection = () => {
@@ -49,7 +29,7 @@ const MissionSection = () => {
       </motion.div>
       
       <div className="container mx-auto px-4 relative z-10" ref={ref}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 max-w-4xl mx-auto">
           {values.map((item, i) => (
             <motion.div
               key={item.title}
@@ -74,7 +54,7 @@ const MissionSection = () => {
               }}
               onHoverStart={() => setActiveIndex(i)}
               onHoverEnd={() => setActiveIndex(null)}
-              className={`text-center p-8 rounded-2xl cursor-pointer transition-all duration-300 ${
+              className={`text-center p-8 rounded-2xl cursor-pointer transition-all duration-300 w-full md:w-80 lg:w-96 ${
                 activeIndex === i 
                   ? 'bg-card shadow-2xl shadow-accent/20 border border-accent/30' 
                   : 'bg-card/50 backdrop-blur-sm border border-border/30'

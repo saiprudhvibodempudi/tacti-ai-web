@@ -38,7 +38,7 @@ const DomainsSection = () => {
   const backgroundX = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="domains" className="py-24 bg-section-alt relative overflow-hidden">
+    <section id="domains" className="py-16 bg-section-alt relative overflow-hidden">
       {/* Animated flowing background */}
       <motion.div 
         className="absolute inset-0 opacity-5"
@@ -92,7 +92,7 @@ const DomainsSection = () => {
           </motion.h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto place-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 px-4 lg:px-8">
           <AnimatePresence>
             {domains.map((domain, i) => (
               <motion.div
@@ -120,7 +120,7 @@ const DomainsSection = () => {
                 onHoverStart={() => setHoveredDomain(i)}
                 onHoverEnd={() => setHoveredDomain(null)}
                 exit={{ opacity: 0, scale: 0.8 }}
-                className={`bg-card border p-6 cursor-pointer transition-all duration-300 ${
+                className={`bg-card border p-8 cursor-pointer transition-all duration-300 w-full h-full ${
                   hoveredDomain === i 
                     ? 'border-accent/60 shadow-2xl shadow-accent/30 bg-gradient-to-br from-card to-accent/5' 
                     : 'border-border hover:border-accent/40'
@@ -139,12 +139,12 @@ const DomainsSection = () => {
                   }}
                   className="mb-5"
                 >
-                  <domain.icon className={`h-8 w-8 transition-colors duration-300 ${
+                  <domain.icon className={`h-10 w-10 transition-colors duration-300 ${
                     hoveredDomain === i ? 'text-primary' : 'text-accent'
                   }`} strokeWidth={1.5} />
                 </motion.div>
                 <motion.h3 
-                  className="text-sm font-serif font-bold text-foreground mb-2"
+                  className="text-base font-serif font-bold text-foreground mb-3"
                   animate={{
                     scale: hoveredDomain === i ? 1.05 : 1,
                     color: hoveredDomain === i ? "hsl(var(--primary))" : "hsl(var(--foreground))"
@@ -154,7 +154,7 @@ const DomainsSection = () => {
                   {domain.title}
                 </motion.h3>
                 <motion.p 
-                  className="text-xs text-muted-foreground leading-relaxed"
+                  className="text-sm text-muted-foreground leading-relaxed"
                   animate={{
                     y: hoveredDomain === i ? -2 : 0,
                     opacity: hoveredDomain === i ? 1 : 0.8
