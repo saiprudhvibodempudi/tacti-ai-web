@@ -1,0 +1,15 @@
+services:
+  # Service configuration
+  - type: web
+    name: militros
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    staticPublishPath: dist
+    
+# SPA routing configuration
+rewrites:
+  - source: /*
+    destination: /index.html
+    type: rewrite

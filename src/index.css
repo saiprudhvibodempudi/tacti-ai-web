@@ -1,0 +1,93 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  :root {
+    /* Militros tactical palette */
+    --background: 50 15% 96%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Deep Olive Green primary */
+    --primary: 64 32% 33%;
+    --primary-foreground: 50 15% 96%;
+
+    /* Muted Sage secondary */
+    --secondary: 66 20% 70%;
+    --secondary-foreground: 64 32% 20%;
+
+    /* Muted tones */
+    --muted: 66 15% 85%;
+    --muted-foreground: 64 10% 42%;
+
+    /* Burnt Orange accent */
+    --accent: 28 63% 44%;
+    --accent-foreground: 50 15% 96%;
+
+    /* Deep red CTA */
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 64 10% 82%;
+    --input: 64 10% 82%;
+    --ring: 28 63% 44%;
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --cta: 28 63% 44%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 28 63% 36%;
+    --gunmetal: 64 32% 25%;
+    --steel: 64 15% 48%;
+    --olive: 64 32% 33%;
+    --slate-blue: 28 63% 44%;
+    --tactical-white: 50 15% 96%;
+    --section-alt: 66 15% 92%;
+    --sage: 66 20% 70%;
+
+    /* Scroll margin for fixed navbar */
+    --navbar-height: 4rem; /* 64px */
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Scroll margin for sections to account for fixed navbar */
+  section[id] {
+    scroll-margin-top: var(--navbar-height);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
