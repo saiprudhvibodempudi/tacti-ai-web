@@ -4,7 +4,7 @@ import { useRef } from "react";
 const clients = [
   {
     name: "Government of Telangana",
-    logo: "/clients/Governmentoftelangana.png"
+    logo: "/clients/govt.png"
   },
   {
     name: "Indian Army",
