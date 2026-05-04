@@ -53,7 +53,7 @@ const CareersSection = () => {
         },
         { 
           title: "Mechanical Design Engineer", 
-          department: "Manufacturing", 
+          department: "Robotics", 
           location: "On-site",
           type: "Full-time",
           applyLink: "https://militros.com/careers/mechanical-design-engineer"

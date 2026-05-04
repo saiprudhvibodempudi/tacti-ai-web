@@ -15,8 +15,8 @@ const domains = [
   },
   {
     icon: Settings,
-    title: "Manufacturing Technology",
-    description: "End-to-end product engineering with hardware integration, mechanical design, and manufacturing-ready prototyping.",
+    title: "Robotics Technology",
+    description: "End-to-end product engineering with hardware integration, mechanical design, and robotics-ready prototyping.",
   },
   {
     icon: Zap,
@@ -83,7 +83,7 @@ const DomainsSection = () => {
             Core Domains
           </motion.p>
           <motion.h2 
-            className="text-3xl md:text-4xl font-serif font-bold text-foreground"
+            className="text-4xl md:text-5xl font-serif font-bold text-foreground"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}

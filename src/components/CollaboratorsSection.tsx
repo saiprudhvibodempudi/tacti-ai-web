@@ -24,7 +24,7 @@ const clientTypes = [
   { label: "Government", desc: "State and central government agencies driving defence and technology initiatives." },
   { label: "Defence Forces", desc: "Indian Army, Navy, and Air Force requiring advanced defence technology solutions." },
   { label: "Research Labs", desc: "Government research institutions developing cutting-edge defence technologies." },
-  { label: "Defence Industry", desc: "Defence manufacturing and technology partners in mission-critical operations." },
+  { label: "Defence Industry", desc: "Defence robotics and technology partners in mission-critical operations." },
 ];
 
 const CollaboratorsSection = () => {
