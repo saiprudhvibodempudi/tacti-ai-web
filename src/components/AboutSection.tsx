@@ -141,7 +141,7 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.0 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
             >
               {segments.map((segment, i) => (
                 <motion.div
@@ -159,16 +159,16 @@ const AboutSection = () => {
                     y: -3,
                     transition: { type: "spring", stiffness: 300 }
                   }}
-                  className="text-center p-4 rounded-lg bg-card/30 backdrop-blur-sm border border-border/30 group cursor-pointer"
+                  className="text-center p-3 sm:p-4 rounded-lg bg-card/30 backdrop-blur-sm border border-border/30 group cursor-pointer min-w-0"
                 >
                   <motion.div 
-                    className="text-xl font-serif font-bold text-primary mb-2"
+                    className="text-lg sm:text-xl font-serif font-bold text-primary mb-2"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
                   >
                     {segment.value}
                   </motion.div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">
+                  <div className="text-xs sm:text-xs uppercase tracking-normal sm:tracking-widest text-muted-foreground group-hover:text-foreground transition-colors break-words">
                     {segment.label}
                   </div>
                 </motion.div>
