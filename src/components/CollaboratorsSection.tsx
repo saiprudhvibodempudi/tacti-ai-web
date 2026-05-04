@@ -4,7 +4,7 @@ import { useRef } from "react";
 const clients = [
   {
     name: "Government of Telangana",
-    logo: "/clients/government-of-telangana-logo-png_seeklogo-378992.png"
+    logo: "/clients/Governmentoftelangana.png"
   },
   {
     name: "Indian Army",
@@ -68,7 +68,7 @@ const CollaboratorsSection = () => {
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="h-16 w-auto object-contain max-w-[100px] mb-3"
+                    className="h-20 w-auto object-contain max-w-[120px] mb-3"
                   />
                   <p className="text-primary-foreground text-sm font-medium text-center leading-tight">
                     {client.name}

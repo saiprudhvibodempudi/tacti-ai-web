@@ -32,8 +32,8 @@ const Footer = () => {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-widest mb-4 text-primary-foreground/70">Contact</h4>
             <ul className="space-y-2 text-xs text-primary-foreground/50">
-              <li>info@militros.com</li>
-              <li><Link to="/contact" className="hover:text-primary-foreground transition-colors">Contact Form</Link></li>
+              <li><Link to="/contact" className="hover:text-primary-foreground transition-colors">Get In Touch</Link></li>
+              <li>admin@militros.ai</li>
             </ul>
           </div>
         </div>
