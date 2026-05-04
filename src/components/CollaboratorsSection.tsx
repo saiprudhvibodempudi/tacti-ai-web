@@ -13,10 +13,6 @@ const clients = [
   {
     name: "Indian Navy",
     logo: "/clients/navy.webp"
-  },
-  {
-    name: "CDAC",
-    logo: "/clients/cdac.webp"
   }
 ];
 
@@ -58,7 +54,7 @@ const CollaboratorsSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto place-items-center">
             {clients.map((client, i) => (
               <motion.div
                 key={client.name}
