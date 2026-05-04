@@ -21,6 +21,12 @@ const productCategories = [
         specs: ["EO-IR System", "LMG & MMG Compatible", "Control Range: 3 Km", "Target Detection", "Payload Delivery: 60 kgs", "Smart Radio Link"]
       },
       {
+        title: "Ground Control System (GCS)",
+        image: "/project-images/tcsgcs.png",
+        description: "Advanced Ground Control System for comprehensive command and control of Tactical Combat Robot operations. Features real-time video streaming, telemetry data monitoring, and intuitive control interfaces for seamless remote operation in tactical environments. Integrated with TCR for enhanced battlefield coordination.",
+        specs: ["Real-time Video Feed", "Telemetry Monitoring", "Remote Control Interface", "TCR Integration", "Battlefield Coordination", "Secure Communication"]
+      },
+      {
         title: "Smart Target System",
         image: "/project-images/smarttargetsystem.png",
         description: "A cutting-edge mobile robotic target platform designed to simulate real combat scenarios in all terrains and weather conditions. Combines smart automation, robust design, and real-time feedback for enhanced firing range training and tactical evaluation.",
@@ -221,7 +227,7 @@ const ProjectsSection = () => {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                   )}

@@ -54,7 +54,7 @@ const CollaboratorsSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto place-items-center">
             {clients.map((client, i) => (
               <motion.div
                 key={client.name}
