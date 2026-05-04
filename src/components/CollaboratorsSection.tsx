@@ -8,11 +8,11 @@ const clients = [
   },
   {
     name: "Indian Army",
-    logo: "/clients/army.webp"
+    logo: "/clients/army.png"
   },
   {
     name: "Indian Navy",
-    logo: "/clients/navy.webp"
+    logo: "/clients/navy.png"
   }
 ];
 
