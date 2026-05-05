@@ -5,14 +5,14 @@ import { ArrowUpRight, Zap, Target, Shield, Wrench, Brain, CircuitBoard, Lock } 
 const productCategories = [
   {
     id: "robotics",
-    title: "Robotics – UGV / RCWS",
+    title: "Robotics – UGV",
     icon: Wrench,
     products: [
       {
         title: "Multi Utility Unmanned Ground Vehicle (MU-UGV)",
         image: "/project-images/mugv.png",
-        description: "Robotic Platform for Multi Utility application targeted towards Payload delivery, Ordnance Disposal and Cas Evac. Payload capability of 120 Kgs & speed of 9 kmph. Wireless Communication: Secure RF link and compatible for Connecting to Army Radio sets. Output Streams: Video and telemetry Data. Attachments: Robotic arm, Ground Penetrating RADAR, Tethered Drone Power Supply Unit. Supplied to Indian Army and Secured Joint development Partner Status For this Product with Indian Army",
-        specs: ["Payload: 120 Kgs", "Speed: 9 kmph", "Secure RF Communication", "Video & Telemetry", "Robotic Arm", "Ground Penetrating RADAR"]
+        description: "A versatile robotic platform built for mission-critical support in payload delivery, ordnance disposal, and casualty evacuation. Versatile multi-role platform for defense and support with 120 kg payload at 9 kmph, built to perform under pressure. Features secure RF communication with seamless Army radio integration and live video & telemetry streaming. Available attachments include robotic arm, ground penetrating radar, and tethered drone power supply. Trusted by Indian Army with Joint Development Partner status.",
+        specs: ["120 kg payload at 9 kmph", "Secure RF communication", "Army radio integration", "Live video & telemetry", "Robotic arm attachment", "Ground Penetrating Radar", "Tethered drone power supply", "Indian Army deployment"]
       },
       {
         title: "Tactical Combat Robot",
@@ -40,13 +40,7 @@ const productCategories = [
     icon: CircuitBoard,
     image: "/dti-images/internetofthings.png",
     products: [
-      {
-        title: "AI Based automated Target tracking NSVT for TK-90",
-        image: "/project-images/nsvt.png",
-        description: "An IP-65 rated autonomous drone detection and neutralization system using AI-powered vision, seamlessly integrated with the T-90 AA turret for real-time threat engagement comprising the EOIR and GCS.",
-        specs: ["AI-Driven Detection", "Real-time Tracking", "Integrated Turret Control", "EO-IR System", "Ethernet & USB", "70m Range"]
-      },
-      {
+            {
         title: "Integrated Fire Detection and suppression System",
         image: "/project-images/firedetectionandsupression.png",
         description: "The primary objective of IFDSS is to provide a rapid, reliable, and automated fire detection and suppression solution for armored and military vehicles, ensuring the safety of personnel and protection of critical systems during combat or operational scenarios.",
@@ -60,7 +54,7 @@ const productCategories = [
       },
       {
         title: "81mm Mortar Telemetry Bomb",
-        image: "/project-images/mortartelemetrybomb.png",
+        image: "/project-images/81mm Mortar Telemetry Bomb 2.png",
         description: "A telemetry-enabled 81mm mortar bomb designed for live tracking of projectile flight in real time. It transmits encrypted GNSS-based positional data to a receiver station for trajectory analysis and training support.",
         specs: ["GNSS Tracking", "≤5m Accuracy", "VHF/UHF Transmission", "5km LoS Range", "Telemetry Data Output", "IP65 Receiver"]
       },
@@ -73,19 +67,19 @@ const productCategories = [
     products: [
       {
         title: "Simple Driving Simulator",
-        image: "/project-images/simpledrivingsimulator.png",
+        image: "/project-images/Universal Driving Simulator.png",
         description: "A portable, steel-framed driving simulator equipped with essential vehicle controls and a 32\" display. Designed to train learners in basic handling and maneuvering techniques in a controlled, fuel-free environment.",
         specs: ["Dimensions: 1800L×1000W×1800H mm", "Steel Frame", "32\" LED Display", "Steering, Gear, Accelerator", "Adjustable Seat", "1 KVA UPS"]
       },
       {
-        title: "Universal Driving Simulator",
-        image: "/project-images/universaltraining.png",
-        description: "A full-scale simulator replicating military vehicle's cabins, designed to train drivers in diverse terrains, weather conditions, & tactical scenarios. Includes instructor control, real-time feedback, & customizable training modules.",
-        specs: ["Full-scale Cabin", "Multiple Terrain Types", "Weather Simulation", "Instructor Control", "Performance Tracking", "Audio Effects"]
+        title: "VR Based Training Simulator",
+        image: "/project-images/VR based Motion Simulator.png",
+        description: "Compact, immersive VR simulator with 3DOF motion (pitch, roll, yaw) for realistic training across driving and flight scenarios, delivering high-fidelity visuals and responsive motion feedback.",
+        specs: ["Vehicle Types: Light vehicles, trucks, armored units, flight & helicopter", "VR Cabin: Ergonomic cockpit with steering/flight controls, pedals, and VR headset integration", "Instructor Station: Scenario creation, trainee monitoring, performance analytics, fault injection", "Display System: High-resolution VR headset with 360° immersive environment", "Motion System (3DOF): Pitch, roll, yaw with speeds up to 160°/s (roll/pitch) & 360°/s (yaw)", "Terrains & Modes: Urban, desert, mountain, off-road; day/night cycles with dynamic lighting"]
       },
       {
         title: "Recovery Training Simulator",
-        image: "/project-images/armyvehicletrainingsimulators.png",
+        image: "/project-images/universaltraining.png",
         description: "Advanced recovery training simulator for military vehicle operators, focusing on vehicle recovery techniques, towing operations, and emergency response procedures in various terrain conditions.",
         specs: ["Recovery Operations", "Towing Training", "Emergency Response", "Terrain Simulation", "Instructor Control", "Performance Metrics"]
       },
@@ -104,15 +98,21 @@ const productCategories = [
     products: [
       {
         title: "ASTRA-E",
-        image: "/project-images/astra.png",
+        image: "/project-images/ASTRAE.png",
         description: "ASTRA-E is a lightweight, AI-powered electro-optic module equipped with picatinny rail for easy mount. It integrates real-time human detection, laser range finding, and wireless communication to assist shooters with precision targeting and commander-level situational awareness.",
         specs: ["<800g Weight", "50mm Lens Camera", "10 TOPS AI Processor", "3.2\" Display", "Laser Range Finder", "Secure Wireless"]
       },
       {
         title: "EO-IR System",
-        image: "/project-images/eoir system.png",
+        image: "/project-images/EOIR.png",
         description: "A compact EOIR payload combining HD day optical zoom camera, thermal imaging, and laser range finding for day/night surveillance and AI-based target tracking. Designed for turret, UGV, RCWS and perimeter security integration.",
         specs: ["1080p @ 60fps", "40x Optical Zoom", "LWIR Thermal", "Laser Range Finder", "AI Detection", "Ethernet & USB"]
+      },
+      {
+        title: "AI Based automated Target tracking NSVT for TK-90",
+        image: "/project-images/nsvt.png",
+        description: "An IP-65 rated autonomous drone detection and neutralization system using AI-powered vision, seamlessly integrated with the T-90 AA turret for real-time threat engagement comprising the EOIR and GCS.",
+        specs: ["AI-Driven Detection", "Real-time Tracking", "Integrated Turret Control", "EO-IR System", "Ethernet & USB", "70m Range"]
       },
       {
         title: "Remote Controlled Weapon System – LMG/MMG",
@@ -122,7 +122,7 @@ const productCategories = [
       },
       {
         title: "Ten AI Weapon System (TAIWS)",
-        image: "/project-images/taiws.png",
+        image: "/project-images/TAIWS.png",
         description: "TAIWS is AI-based weapon system designed to enhance border surveillance and counter-infiltration operations. The system integrates advanced secondary vision technology (thermal and optical sensors) with a machine gun to enable target detection and engagement in low-visibility, rugged terrains like those along the LoC.",
         specs: ["AI Integration", "Thermal Camera (2km)", "Optical Camera", "LoC Surveillance", "IP65 Rating", "Machine Gun Integration"]
       }
@@ -213,13 +213,13 @@ const ProjectsSection = () => {
                 onHoverEnd={() => setHoveredProduct(null)}
               >
                 {/* Card Glow Effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-accent to-primary rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary rounded-2xl blur opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
 
                 {/* Main Card */}
                 <motion.div
-                  whileHover={{ y: -8, scale: 1.02 }}
+                  whileHover={{ y: -4, scale: 1.01 }}
                   transition={{ duration: 0.3 }}
-                  className="relative bg-card border border-border rounded-2xl group-hover:shadow-2xl group-hover:shadow-accent/10 transition-all duration-300 overflow-hidden flex flex-col h-full"
+                  className="relative bg-card border border-border rounded-2xl group-hover:shadow-lg group-hover:shadow-accent/20 transition-all duration-300 overflow-hidden flex flex-col h-full"
                 >
                   {/* Product Image */}
                   {product.image && (
@@ -227,7 +227,7 @@ const ProjectsSection = () => {
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                       />
                     </div>
                   )}
@@ -282,16 +282,16 @@ const ProjectsSection = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={isHovered ? { opacity: 1, height: "auto" } : { opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="pt-4 border-t border-border/50 overflow-hidden"
+                    className="pt-4 -mt-2 border-t border-border/50 overflow-hidden"
                   >
-                    <div className="flex items-center justify-between text-xs">
-                      <div className="flex items-center gap-1 text-accent">
-                        <Target className="w-3 h-3" />
-                        <span>Defence Ready</span>
+                    <div className="flex items-center justify-between text-xs px-2">
+                      <div className="flex items-center gap-1 text-accent truncate">
+                        <Target className="w-3 h-3 flex-shrink-0" />
+                        <span className="truncate">Defence Ready</span>
                       </div>
-                      <div className="flex items-center gap-1 text-primary">
-                        <Shield className="w-3 h-3" />
-                        <span>Military Grade</span>
+                      <div className="flex items-center gap-1 text-primary truncate">
+                        <Shield className="w-3 h-3 flex-shrink-0" />
+                        <span className="truncate">Military Grade</span>
                       </div>
                     </div>
                   </motion.div>
