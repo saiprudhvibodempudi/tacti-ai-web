@@ -54,23 +54,23 @@ const CollaboratorsSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto place-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto items-stretch">
             {clients.map((client, i) => (
               <motion.div
                 key={client.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.3 + i * 0.08 }}
-                whileHover={{ scale: 1.1, y: -3 }}
-                className="flex"
+                whileHover={{ scale: 1.05, y: -3 }}
+                className="flex h-full"
               >
-                <div className="bg-primary-foreground/20 border border-primary-foreground/30 p-6 hover:bg-primary-foreground/30 transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl flex-1 h-40 flex flex-col items-center justify-center">
+                <div className="bg-primary-foreground/20 border border-primary-foreground/30 p-8 hover:bg-primary-foreground/30 transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl flex-1 h-56 min-h-[224px] flex flex-col items-center justify-center w-full">
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="h-20 w-auto object-contain max-w-[120px] mb-3"
+                    className="h-32 w-auto object-contain max-w-[180px] mb-4"
                   />
-                  <p className="text-primary-foreground text-sm font-medium text-center leading-tight">
+                  <p className="text-primary-foreground text-lg font-semibold text-center leading-tight">
                     {client.name}
                   </p>
                 </div>

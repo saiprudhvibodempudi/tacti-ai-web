@@ -44,8 +44,57 @@ const AboutSection = () => {
   const floatY3 = useTransform(scrollYProgress, [0, 1], [0, -80]);
 
   return (
-    <section id="about" className="py-24 bg-background">
-      <div className="container mx-auto px-4" ref={ref}>
+    <section id="about" className="py-24 relative overflow-hidden bg-gradient-to-br from-orange-50 via-green-50 to-emerald-50">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        {/* Floating Gradient Orbs */}
+        <motion.div
+          style={{ y: floatY1 }}
+          className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-orange-300/20 to-amber-300/20 rounded-full blur-3xl"
+        />
+        <motion.div
+          style={{ y: floatY2 }}
+          className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-green-300/20 to-emerald-300/20 rounded-full blur-3xl"
+        />
+        <motion.div
+          style={{ y: floatY3 }}
+          className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-lime-300/20 to-green-300/20 rounded-full blur-3xl"
+        />
+        
+        {/* Animated Geometric Shapes */}
+        <motion.div
+          animate={{
+            rotate: 360,
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute top-32 right-32 w-32 h-32 border-2 border-orange-300/30"
+        />
+        <motion.div
+          animate={{
+            rotate: -360,
+            scale: [1, 0.8, 1],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          className="absolute bottom-40 left-20 w-24 h-24 border-2 border-green-300/30"
+        />
+        
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-grid-white/5 bg-[size:50px_50px]" />
+        
+        {/* Radial Gradient Overlay */}
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-transparent to-slate-900/50" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -53,7 +102,7 @@ const AboutSection = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.p 
-            className="text-xs tracking-[0.3em] uppercase text-accent font-medium mb-4 inline-block"
+            className="text-xs tracking-[0.3em] uppercase text-orange-600 font-medium mb-4 inline-block"
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -62,7 +111,7 @@ const AboutSection = () => {
           </motion.p>
           
           <motion.h2 
-            className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-8"
+            className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-8"
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -76,7 +125,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="prose prose-lg max-w-none mb-16"
           >
-            <p className="text-muted-foreground leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-lg">
               Founded in 2025 and headquartered in Hyderabad, Militros is a performance-driven product design and development company. We are a team of young pioneers committed to solving complex problems at the intersection of defence and everyday life.
             </p>
           </motion.div>
@@ -90,7 +139,7 @@ const AboutSection = () => {
           className="max-w-4xl mx-auto mb-20"
         >
           <motion.h3 
-            className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-6"
+            className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -99,7 +148,7 @@ const AboutSection = () => {
           </motion.h3>
           
           <motion.p 
-            className="text-muted-foreground leading-relaxed text-lg"
+            className="text-gray-700 leading-relaxed text-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.7 }}
@@ -116,7 +165,7 @@ const AboutSection = () => {
           className="max-w-5xl mx-auto mb-20"
         >
           <motion.h3 
-            className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-12 text-center"
+            className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-12 text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.9 }}
@@ -140,13 +189,13 @@ const AboutSection = () => {
               >
                 <Target className="w-8 h-8 text-white" />
               </motion.div>
-              <h4 className="text-lg font-serif font-bold text-foreground mb-4 uppercase tracking-wider">
+              <h4 className="text-lg font-serif font-bold text-gray-900 mb-4 uppercase tracking-wider">
                 VISION
               </h4>
-              <h5 className="text-xl font-serif font-bold text-primary mb-4">
+              <h5 className="text-xl font-serif font-bold text-red-800 mb-4">
                 Leading Innovator in Defence Technology
               </h5>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 To become a globally recognized innovator — ensuring our advanced automation solutions enhance security, efficiency, and resilience across modern defence and civilian life.
               </p>
             </motion.div>
@@ -166,13 +215,13 @@ const AboutSection = () => {
               >
                 <Shield className="w-8 h-8 text-white" />
               </motion.div>
-              <h4 className="text-lg font-serif font-bold text-foreground mb-4 uppercase tracking-wider">
+              <h4 className="text-lg font-serif font-bold text-gray-900 mb-4 uppercase tracking-wider">
                 MISSION
               </h4>
-              <h5 className="text-xl font-serif font-bold text-primary mb-4">
+              <h5 className="text-xl font-serif font-bold text-green-800 mb-4">
                 Cutting-Edge Technology for a Safer World
               </h5>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-gray-700 leading-relaxed">
                 Develop high-impact defence technologies that bring automation, enhance security, protect lives, and drive meaningful innovation — one breakthrough at a time.
               </p>
             </motion.div>
@@ -188,7 +237,7 @@ const AboutSection = () => {
         >
           <motion.div className="text-center mb-12">
             <motion.h3 
-              className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-4"
+              className="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.5 }}
@@ -196,7 +245,7 @@ const AboutSection = () => {
               Our Core Values
             </motion.h3>
             <motion.p 
-              className="text-muted-foreground text-lg max-w-2xl mx-auto"
+              className="text-gray-700 text-lg max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 1.6 }}
@@ -240,10 +289,10 @@ const AboutSection = () => {
                   >
                     <Icon className="w-7 h-7 text-white" />
                   </motion.div>
-                  <h4 className="text-lg font-serif font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                  <h4 className="text-lg font-serif font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
                     {value.title}
                   </h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-gray-700 leading-relaxed">
                     {value.description}
                   </p>
                 </motion.div>

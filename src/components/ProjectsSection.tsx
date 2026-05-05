@@ -91,7 +91,7 @@ const productCategories = [
       },
       {
         title: "Hill Driving Training Simulator",
-        image: "/project-images/armyvehicletrainingsimulators.png",
+        image: "/project-images/armytrucksimulator.png",
         description: "Specialized simulator for hill driving training, designed to prepare military drivers for challenging mountain terrains, steep gradients, and adverse weather conditions encountered in high-altitude operations.",
         specs: ["Hill Terrain Simulation", "Gradient Training", "Weather Effects", "Altitude Simulation", "Safety Systems", "Real-time Feedback"]
       }
@@ -197,7 +197,7 @@ const ProjectsSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch"
         >
           {selectedCategoryData?.products.map((product, i) => {
             const isHovered = hoveredProduct === i;
@@ -208,7 +208,7 @@ const ProjectsSection = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="relative group cursor-pointer"
+                className="relative group cursor-pointer h-full flex flex-col"
                 onHoverStart={() => setHoveredProduct(i)}
                 onHoverEnd={() => setHoveredProduct(null)}
               >
@@ -219,15 +219,15 @@ const ProjectsSection = () => {
                 <motion.div
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
-                  className="relative bg-card border border-border rounded-2xl p-6 group-hover:shadow-2xl group-hover:shadow-accent/10 transition-all duration-300 overflow-hidden"
+                  className="relative bg-card border border-border rounded-2xl group-hover:shadow-2xl group-hover:shadow-accent/10 transition-all duration-300 overflow-hidden flex flex-col h-full"
                 >
                   {/* Product Image */}
                   {product.image && (
-                    <div className="mb-4 h-40 overflow-hidden rounded-lg">
+                    <div className="h-48 overflow-hidden rounded-t-2xl">
                       <img
                         src={product.image}
                         alt={product.title}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                   )}
@@ -237,40 +237,43 @@ const ProjectsSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-primary/20"></div>
                   </div>
 
-                  {/* Product Title */}
-                  <motion.h3
-                    className="text-lg font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors relative z-10"
-                    animate={isHovered ? { x: 2 } : { x: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {product.title}
-                  </motion.h3>
+                  {/* Product Content */}
+                  <div className="p-6 flex flex-col flex-grow">
+                    {/* Product Title */}
+                    <motion.h3
+                      className="text-lg font-serif font-bold text-foreground mb-3 group-hover:text-accent transition-colors relative z-10"
+                      animate={isHovered ? { x: 2 } : { x: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {product.title}
+                    </motion.h3>
 
-                  {/* Description */}
-                  <motion.p
-                    className="text-sm text-muted-foreground leading-relaxed mb-4 relative z-10"
-                    animate={isHovered ? { opacity: 0.8 } : { opacity: 1 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {product.description}
-                  </motion.p>
+                    {/* Description */}
+                    <motion.p
+                      className="text-sm text-muted-foreground leading-relaxed mb-4 relative z-10"
+                      animate={isHovered ? { opacity: 0.8 } : { opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {product.description}
+                    </motion.p>
 
-                  {/* Specifications */}
-                  <div className="space-y-2 mb-4">
-                    <h4 className="text-xs font-semibold text-accent uppercase tracking-widest">Key Specifications</h4>
-                    <div className="grid grid-cols-1 gap-1">
-                      {product.specs.map((spec, specIndex) => (
-                        <motion.div
-                          key={specIndex}
-                          initial={{ opacity: 0, x: -10 }}
-                          animate={isHovered ? { opacity: 1, x: 0 } : { opacity: 0.7, x: 0 }}
-                          transition={{ duration: 0.3, delay: specIndex * 0.05 }}
-                          className="flex items-center gap-2 text-xs text-muted-foreground"
-                        >
-                          <div className="w-1 h-1 bg-accent rounded-full"></div>
-                          <span>{spec}</span>
-                        </motion.div>
-                      ))}
+                    {/* Specifications */}
+                    <div className="space-y-2 mb-4 relative z-10">
+                      <h4 className="text-xs font-semibold text-accent uppercase tracking-widest">Key Specifications</h4>
+                      <div className="grid grid-cols-1 gap-1">
+                        {product.specs.map((spec, specIndex) => (
+                          <motion.div
+                            key={specIndex}
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={isHovered ? { opacity: 1, x: 0 } : { opacity: 0.7, x: 0 }}
+                            transition={{ duration: 0.3, delay: specIndex * 0.05 }}
+                            className="flex items-center gap-2 text-xs text-muted-foreground"
+                          >
+                            <div className="w-1 h-1 bg-accent rounded-full"></div>
+                            <span>{spec}</span>
+                          </motion.div>
+                        ))}
+                      </div>
                     </div>
                   </div>
 

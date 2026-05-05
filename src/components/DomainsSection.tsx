@@ -97,45 +97,40 @@ const DomainsSection = () => {
             {domains.map((domain, i) => (
               <motion.div
                 key={domain.title}
-                initial={{ opacity: 0, y: 80, scale: 0.7, rotateY: 45 }}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
                 animate={inView ? { 
                   opacity: 1, 
                   y: 0, 
-                  scale: 1, 
-                  rotateY: 0,
+                  scale: 1,
                   transition: { 
-                    duration: 0.8, 
-                    delay: i * 0.1,
-                    type: "spring",
-                    stiffness: 100
+                    duration: 0.6, 
+                    delay: i * 0.08,
+                    ease: "easeOut"
                   }
                 } : {}}
                 whileHover={{ 
-                  y: -12, 
-                  scale: 1.08,
-                  rotateY: hoveredDomain === i ? 15 : 5,
-                  boxShadow: "0 25px 50px -12px hsl(28 63% 44% / 0.25)",
-                  transition: { type: "spring", stiffness: 400 }
+                  y: -8, 
+                  scale: 1.02,
+                  boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.15)",
+                  transition: { duration: 0.3, ease: "easeOut" }
                 }}
                 onHoverStart={() => setHoveredDomain(i)}
                 onHoverEnd={() => setHoveredDomain(null)}
-                exit={{ opacity: 0, scale: 0.8 }}
+                exit={{ opacity: 0, y: 20 }}
                 className={`bg-card border p-8 cursor-pointer transition-all duration-300 w-full h-full ${
                   hoveredDomain === i 
-                    ? 'border-accent/60 shadow-2xl shadow-accent/30 bg-gradient-to-br from-card to-accent/5' 
-                    : 'border-border hover:border-accent/40'
+                    ? 'border-accent/50 shadow-lg bg-gradient-to-br from-card to-accent/3' 
+                    : 'border-border hover:border-accent/30'
                 }`}
               >
                 <motion.div
                   initial={{ rotate: 0 }}
                   animate={{
-                    rotate: hoveredDomain === i ? [0, 10, -10, 0] : 0,
-                    scale: hoveredDomain === i ? 1.2 : 1,
+                    scale: hoveredDomain === i ? 1.1 : 1,
                   }}
                   transition={{ 
-                    duration: hoveredDomain === i ? 0.6 : 0.3,
-                    repeat: hoveredDomain === i ? Infinity : 0,
-                    repeatType: "reverse"
+                    duration: 0.3,
+                    ease: "easeOut"
                   }}
                   className="mb-5"
                 >
@@ -146,30 +141,28 @@ const DomainsSection = () => {
                 <motion.h3 
                   className="text-base font-serif font-bold text-foreground mb-3"
                   animate={{
-                    scale: hoveredDomain === i ? 1.05 : 1,
                     color: hoveredDomain === i ? "hsl(var(--primary))" : "hsl(var(--foreground))"
                   }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                 >
                   {domain.title}
                 </motion.h3>
                 <motion.p 
                   className="text-sm text-muted-foreground leading-relaxed"
                   animate={{
-                    y: hoveredDomain === i ? -2 : 0,
-                    opacity: hoveredDomain === i ? 1 : 0.8
+                    opacity: hoveredDomain === i ? 1 : 0.85
                   }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                 >
                   {domain.description}
                 </motion.p>
                 
-                {/* Hover indicator */}
+                {/* Classic hover indicator */}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent to-primary"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent to-primary"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: hoveredDomain === i ? 1 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
                   style={{ originX: 0 }}
                 />
               </motion.div>
