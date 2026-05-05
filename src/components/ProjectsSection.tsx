@@ -17,14 +17,14 @@ const productCategories = [
       {
         title: "Tactical Combat Robot",
         image: "/project-images/tacticalcombatrobot.png",
-        description: "Robots don't bleed. Offensive Robot used to gather intelligence and engage targets in case of Requirement & use in War Scenarios, Counter Terrorism and Counter Insurgency Operations where soldiers usually are under fire. Can Save Lives of Front-Line Soldiers.",
-        specs: ["EO-IR System", "LMG & MMG Compatible", "Control Range: 3 Km", "Target Detection", "Payload Delivery: 60 kgs", "Smart Radio Link"]
+        description: "Mission-ready force multiplier. An offensive unmanned ground system designed to gather intelligence, support target engagement, and operate in high-risk environments such as war zones, counter-terrorism, and counter-insurgency missions where soldiers face direct fire. Protecting front-line soldiers and saving lives.",
+        specs: ["EO-IR system", "LMG & MMG weapon systems compatible", "Control Range: 3 km smart radio link", "Target detection and tracking", "Day/night identification", "Distance measurement", "Payload delivery up to 60 kg", "Ammunition counter"]
       },
       {
-        title: "Ground Control System (GCS)",
+        title: "Ground Control Station",
         image: "/project-images/tcsgcs.png",
-        description: "Advanced Ground Control System for comprehensive command and control of Tactical Combat Robot operations. Features real-time video streaming, telemetry data monitoring, and intuitive control interfaces for seamless remote operation in tactical environments. Integrated with TCR for enhanced battlefield coordination.",
-        specs: ["Real-time Video Feed", "Telemetry Monitoring", "Remote Control Interface", "TCR Integration", "Battlefield Coordination", "Secure Communication"]
+        description: "Advanced command and control center for operations. Provides real-time video streaming, telemetry monitoring, and intuitive control interfaces for seamless remote operation in tactical environments. Enables battlefield coordination with secure communication links for enhanced mission effectiveness.",
+        specs: ["Real-time video streaming", "Telemetry data monitoring", "Remote control interface", "3 km control range", "Secure communication", "Battlefield coordination", "TCR integration", "Mission planning interface"]
       },
       {
         title: "Smart Target System",
