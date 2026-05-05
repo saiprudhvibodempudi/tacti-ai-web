@@ -6,9 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <Link to="/" className="font-serif text-xl font-bold tracking-tight text-primary-foreground">
-              militros
-            </Link>
+            <Link to="/" className="font-serif text-xl font-bold tracking-tight text-primary-foreground">Militros</Link>
             <p className="text-xs text-primary-foreground/50 mt-3 leading-relaxed">
               Designing for a smarter, safer, future-ready tomorrow.
             </p>

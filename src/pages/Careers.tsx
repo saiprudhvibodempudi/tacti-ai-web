@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Shield, Lock, Target, Zap, Eye, Cpu, Users, Award, Briefcase, MapPin, Plus, X, Edit } from "lucide-react";
+import { Shield, Lock, Target, Zap, Eye, Cpu, Users, Award, Briefcase, MapPin, Plus, X, Edit, ExternalLink, Flame, Handshake, Lightbulb, BadgeCheck, TrendingUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+const LINKEDIN_JOBS_URL = "https://www.linkedin.com/company/virinnovations/jobs/";
 
 const Careers = () => {
   const navigate = useNavigate();
@@ -201,8 +203,137 @@ const Careers = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
 
+      {/* Why Join Us */}
+      <section className="pt-24 pb-6 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="text-center mb-8"
+            >
+              <p className="text-xs tracking-[0.3em] uppercase text-accent font-medium mb-3">Careers</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-foreground">Why Join Us?</h1>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.05 }}
+                whileHover={{ y: -4 }}
+                className="lg:col-span-3 bg-card border border-border rounded-2xl p-7"
+              >
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-accent" />
+                </div>
+                <h2 className="text-xl font-bold text-foreground mb-3">About Militros</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  At Militros, we are a team of driven pioneers working together to create meaningful impact. Our diverse professionals, brought together from different cultures and backgrounds across the country, share a common goal: to innovate and contribute to national security through cutting-edge technology.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.12 }}
+                whileHover={{ y: -4 }}
+                className="lg:col-span-3 bg-card border border-border rounded-2xl p-7"
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <Award className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-xl font-bold text-foreground mb-3">Our Core Values</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-3">
+                  <motion.div whileHover={{ y: -3, scale: 1.01 }} className="rounded-xl border border-border bg-background p-4 transition-all duration-300 hover:border-accent/40 hover:shadow-md">
+                    <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2"><Flame className="w-4 h-4 text-accent" />Passion</h3>
+                    <p className="text-sm text-muted-foreground">Driven energy to solve meaningful problems with commitment and purpose.</p>
+                  </motion.div>
+                  <motion.div whileHover={{ y: -3, scale: 1.01 }} className="rounded-xl border border-border bg-background p-4 transition-all duration-300 hover:border-accent/40 hover:shadow-md">
+                    <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2"><Handshake className="w-4 h-4 text-accent" />Integrity</h3>
+                    <p className="text-sm text-muted-foreground">Honest actions, accountability, and trust in every decision we make.</p>
+                  </motion.div>
+                  <motion.div whileHover={{ y: -3, scale: 1.01 }} className="rounded-xl border border-border bg-background p-4 transition-all duration-300 hover:border-accent/40 hover:shadow-md">
+                    <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2"><Lightbulb className="w-4 h-4 text-accent" />Innovation</h3>
+                    <p className="text-sm text-muted-foreground">Creative thinking and bold engineering to build next-generation solutions.</p>
+                  </motion.div>
+                  <motion.div whileHover={{ y: -3, scale: 1.01 }} className="rounded-xl border border-border bg-background p-4 transition-all duration-300 hover:border-accent/40 hover:shadow-md">
+                    <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2"><BadgeCheck className="w-4 h-4 text-accent" />Quality</h3>
+                    <p className="text-sm text-muted-foreground">High standards in design, execution, reliability, and performance.</p>
+                  </motion.div>
+                  <motion.div whileHover={{ y: -3, scale: 1.01 }} className="rounded-xl border border-border bg-background p-4 transition-all duration-300 hover:border-accent/40 hover:shadow-md">
+                    <h3 className="font-semibold text-foreground mb-1 flex items-center gap-2"><TrendingUp className="w-4 h-4 text-accent" />Growth</h3>
+                    <p className="text-sm text-muted-foreground">Continuous learning, skill-building, and long-term career progression.</p>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover={{ y: -4 }}
+                className="bg-card border border-border rounded-2xl p-7"
+              >
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">Learn and Grow</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Gain new skills and knowledge while working on projects that challenge and inspire.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.28 }}
+                whileHover={{ y: -4 }}
+                className="bg-card border border-border rounded-2xl p-7"
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <Cpu className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">Innovate and Lead</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Contribute to cutting-edge advancements in robotics, automation, and defence technologies.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.36 }}
+                whileHover={{ y: -4 }}
+                className="bg-card border border-border rounded-2xl p-7"
+              >
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
+                  <Target className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">Make an Impact</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Be part of something bigger. Your work here directly or indirectly strengthens national security.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.44 }}
+              className="mt-6 bg-gradient-to-r from-accent/10 to-primary/10 border border-border rounded-2xl p-6"
+            >
+              <p className="text-muted-foreground leading-relaxed">
+                We believe in providing equal opportunities to talented individuals from all backgrounds and experiences. If someone is passionate about technology, innovation, and making a difference, Militros is the place for him. Shape the future of technology with us. Join our team and embark on a career that truly matters.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Job Openings - Main Content */}
-      <section className="pt-24 pb-16 bg-background">
+      <section className="pt-12 pb-16 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -335,6 +466,34 @@ const Careers = () => {
               ))}
             </div>
           )}
+        </div>
+      </section>
+
+      {/* LinkedIn Jobs Callout */}
+      <section className="pt-0 pb-12 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-4xl mx-auto text-center bg-card border border-border rounded-2xl p-8"
+          >
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Check Out Our Job Openings On LinkedIn
+            </h1>
+            <p className="text-muted-foreground mb-6">
+              Browse current opportunities and apply directly through our official LinkedIn jobs page.
+            </p>
+            <a
+              href={LINKEDIN_JOBS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            >
+              View LinkedIn Jobs
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </motion.div>
         </div>
       </section>
 

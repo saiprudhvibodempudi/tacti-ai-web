@@ -6,26 +6,26 @@ const capabilities = [
   {
     icon: Wrench,
     image: "/dti-images/MU-UGV 5.png",
-    title: "Robotics – UGV / RCWS",
-    points: ["Multi Utility Unmanned Ground Vehicle (MU-UGV)", "Tactical Combat Robot", "Smart Target System"],
+    title: "Robotics – UGV",
+    points: ["Multi Utility Unmanned Ground Vehicle (MU-UGV)", "Tactical Combat Robot", "Ground Control Station", "Smart Target System", "Stair Climbing Robot"],
   },
   {
     icon: Lock,
     image: "/dti-images/fcs.png",
     title: "Fire Control Systems",
-    points: ["ASTRA-E", "EO-IR System", "Remote Controlled Weapon System – LMG/MMG", "Ten AI Weapon System (TAIWS)"],
+    points: ["ASTRA-E", "AI Based automated Target tracking NSVT for TK-90", "Remote Controlled Weapon System – LMG/MMG", "Ten AI Weapon System (TAIWS)"],
   },
   {
     icon: Brain,
     image: "/dti-images/Simulator.png",
     title: "Simulators",
-    points: ["Simple Driving Simulator", "Universal Driving Simulator", "Recovery Training Simulator", "Hill Driving Training Simulator"],
+    points: ["Simple Driving Simulator / Universal Driving Simulator", "VR Based Training Simulator", "Recovery Training Simulator", "Hill Driving Training Simulator"],
   },
   {
     icon: CircuitBoard,
     image: "/dti-images/IoT.png",
     title: "Internet of Things",
-    points: ["AI Based automated Target tracking NSVT for TK-90", "Integrated Fire Detection and suppression System", "Roads that Honk (Vehicle Alarming System)", "81mm Mortar Telemetry Bomb"],
+    points: ["Integrated Fire Detection and suppression System", "EO-IR System", "Roads that Honk", "81mm Mortar Telemetry Bomb"],
   },
 ];
 

@@ -10,7 +10,7 @@ const productCategories = [
     products: [
       {
         title: "Multi Utility Unmanned Ground Vehicle (MU-UGV)",
-        image: "/project-images/mugv.png",
+        image: "/project-images/MU-UGV 4.png",
         description: "A versatile robotic platform built for mission-critical support in payload delivery, ordnance disposal, and casualty evacuation. Versatile multi-role platform for defense and support with 120 kg payload at 9 kmph, built to perform under pressure. Features secure RF communication with seamless Army radio integration and live video & telemetry streaming. Available attachments include robotic arm, ground penetrating radar, and tethered drone power supply. Trusted by Indian Army with Joint Development Partner status.",
         specs: ["120 kg payload at 9 kmph", "Secure RF communication", "Army radio integration", "Live video & telemetry", "Robotic arm attachment", "Ground Penetrating Radar", "Tethered drone power supply", "Indian Army deployment"]
       },
@@ -28,7 +28,7 @@ const productCategories = [
       },
       {
         title: "Smart Target System",
-        image: "/project-images/smarttargetsystem.png",
+        image: "/project-images/smarttargetsystem-v3.png",
         description: "A cutting-edge mobile robotic target platform designed to simulate real combat scenarios in all terrains and weather conditions. Combines smart automation, robust design, and real-time feedback for enhanced firing range training and tactical evaluation.",
         specs: ["Mobile Platform", "Armour Protection (5.56/7.62/9mm)", "GPS Navigation", "Self-healing Mannequins", "1hr Battery Backup", "Real-time Mapping"]
       },
@@ -48,9 +48,15 @@ const productCategories = [
     products: [
             {
         title: "Integrated Fire Detection and suppression System",
-        image: "/project-images/firedetectionandsupression.png",
+        image: "/project-images/IFDSS.png",
         description: "The primary objective of IFDSS is to provide a rapid, reliable, and automated fire detection and suppression solution for armored and military vehicles, ensuring the safety of personnel and protection of critical systems during combat or operational scenarios.",
         specs: ["IR Flame Sensors", "Thermal Detection", "Automated Suppression", "Audio-Visual Alerts", "Up to 8 Sensors", "IP65 Protection"]
+      },
+      {
+        title: "EO-IR System",
+        image: "/project-images/EOIR.png",
+        description: "A compact EOIR payload combining HD day optical zoom camera, thermal imaging, and laser range finding for day/night surveillance and AI-based target tracking. Designed for turret, UGV, RCWS and perimeter security integration.",
+        specs: ["1080p @ 60fps", "40x Optical Zoom", "LWIR Thermal", "Laser Range Finder", "AI Detection", "Ethernet & USB"]
       },
       {
         title: "Roads that Honk",
@@ -72,7 +78,7 @@ const productCategories = [
     icon: Brain,
     products: [
       {
-        title: "Simple Driving Simulator",
+        title: "Simple Driving Simulator / Universal Driving Simulator",
         image: "/project-images/Universal Driving Simulator.png",
         description: "A portable, steel-framed driving simulator equipped with essential vehicle controls and a 32\" display. Designed to train learners in basic handling and maneuvering techniques in a controlled, fuel-free environment.",
         specs: ["Dimensions: 1800L×1000W×1800H mm", "Steel Frame", "32\" LED Display", "Steering, Gear, Accelerator", "Adjustable Seat", "1 KVA UPS"]
@@ -85,7 +91,7 @@ const productCategories = [
       },
       {
         title: "Recovery Training Simulator",
-        image: "/project-images/universaltraining.png",
+        image: "/project-images/recoverytraining-v2.png",
         description: "Advanced recovery training simulator for military vehicle operators, focusing on vehicle recovery techniques, towing operations, and emergency response procedures in various terrain conditions.",
         specs: ["Recovery Operations", "Towing Training", "Emergency Response", "Terrain Simulation", "Instructor Control", "Performance Metrics"]
       },
@@ -108,21 +114,15 @@ const productCategories = [
         description: "ASTRA-E is a lightweight, AI-powered electro-optic module equipped with picatinny rail for easy mount. It integrates real-time human detection, laser range finding, and wireless communication to assist shooters with precision targeting and commander-level situational awareness.",
         specs: ["<800g Weight", "50mm Lens Camera", "10 TOPS AI Processor", "3.2\" Display", "Laser Range Finder", "Secure Wireless"]
       },
-      {
-        title: "EO-IR System",
-        image: "/project-images/EOIR.png",
-        description: "A compact EOIR payload combining HD day optical zoom camera, thermal imaging, and laser range finding for day/night surveillance and AI-based target tracking. Designed for turret, UGV, RCWS and perimeter security integration.",
-        specs: ["1080p @ 60fps", "40x Optical Zoom", "LWIR Thermal", "Laser Range Finder", "AI Detection", "Ethernet & USB"]
-      },
-      {
+            {
         title: "AI Based automated Target tracking NSVT for TK-90",
-        image: "/project-images/nsvt.png",
+        image: "/project-images/nsvt-v2.png",
         description: "An IP-65 rated autonomous drone detection and neutralization system using AI-powered vision, seamlessly integrated with the T-90 AA turret for real-time threat engagement comprising the EOIR and GCS.",
         specs: ["AI-Driven Detection", "Real-time Tracking", "Integrated Turret Control", "EO-IR System", "Ethernet & USB", "70m Range"]
       },
       {
         title: "Remote Controlled Weapon System – LMG/MMG",
-        image: "/project-images/remotecontrolledweaponsystem.png",
+        image: "/project-images/RCWS.png",
         description: "Remote Controlled Weapon System (RCWS) is a modular, AI enabled enemy detection and tracking system that can be controlled and fired at the enemy via GCS from distance of up to 1 KM.",
         specs: ["Modular Platform", "LMG/MMG Compatible", "1 KM Range", "AI Detection", "Solar Power Compatible", "IP Compatible"]
       },
