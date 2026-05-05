@@ -31,6 +31,12 @@ const productCategories = [
         image: "/project-images/smarttargetsystem.png",
         description: "A cutting-edge mobile robotic target platform designed to simulate real combat scenarios in all terrains and weather conditions. Combines smart automation, robust design, and real-time feedback for enhanced firing range training and tactical evaluation.",
         specs: ["Mobile Platform", "Armour Protection (5.56/7.62/9mm)", "GPS Navigation", "Self-healing Mannequins", "1hr Battery Backup", "Real-time Mapping"]
+      },
+      {
+        title: "Stair Climbing Robot",
+        image: "/project-images/SCR 3.png",
+        description: "A compact, man-portable tactical surveillance robot designed to climb stairs and provide real-time video feed to commanders during CI/CT operations, especially in NER, northern regions, and urban warfare scenarios.",
+        specs: ["Dimensions: 250 × 400 × 250 mm; 18 kg", "Advanced stair-climbing mechanism", "360° camera with pistol mount", "Day/night operation with live video", "Secure wireless communication", "Intuitive handheld controller"]
       }
     ]
   },
